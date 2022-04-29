@@ -15,6 +15,9 @@ describe("build_tree.ts", () => {
     {
         expect(() => build_tree("[A,B] [A,C] [B,D] [D,C]"))
             .toThrow("E2 - Cycle");
+
+        expect(() => build_tree("[A,B] [A,C] [C,A]"))
+            .toThrow("E2 - Cycle");
     })
 
     test("E3 - Multiple roots",()=>
