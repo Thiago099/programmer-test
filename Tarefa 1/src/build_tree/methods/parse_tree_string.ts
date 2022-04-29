@@ -1,11 +1,11 @@
 export default function parse_tree_string(input:string) : string[][] {
     return input
-        // split the input
+        // Split the input
         .split(/[\[\]]+/)
-        // clean up whitespace
+        // Clean up whitespace
         .map(x => x.trim())
-        // clean up empty connections
+        // Clean up empty connections
         .filter(x => x.length > 0)
-        // split each connection
+        // Split each connection
         .map(x => x.split(","))
 }

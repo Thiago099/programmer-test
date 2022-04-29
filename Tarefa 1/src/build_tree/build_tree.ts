@@ -5,39 +5,39 @@ import parse_tree from "./methods/parse_tree"
 
 export default function build_tree(input: string): string 
 {
-    // ERROR empty input
+    // ERROR Empty input
     if(input.trim().length == 0) throw "E4 - Invalid input"
     
-    // parse the string input
+    // Parse the string input
     const parsed = parse_tree_string(input)
 
-    // ERROR more than 3 node connection
+    // ERROR More than 3 node connection
     if(parsed.some(item => item.length != 2)) throw "E4 - Invalid input"
     
-    // parse the tree input
-    const all_nodes = parse_tree(parsed)
+    // Parse the tree input
+    const node_map = parse_tree(parsed)
 
-    // find the root and if there are more than one roots
+    // Find the root and if there are more than one roots
     let roots = 0
     let root : Node | null = null
-    for(const key in all_nodes)
+    for(const key in node_map)
     {
-        if(all_nodes[key].root)
+        if(node_map[key].root)
         {
             roots++
-            root = all_nodes[key]
+            root = node_map[key]
         }
     }
 
     if(roots != 1)
     {
-        // ERROR cyclic tree
+        // ERROR Cyclic tree
         if(roots == 0) throw "E2 - Cycle"
-        // ERROR multiple root tree
+        // ERROR Multiple root tree
         throw "E3 - Multiple roots"
     }
 
-    // ERROR cycle in the tree
+    // ERROR Cycle in the tree
     dfs(root)
     function dfs(node: Node | null) : void
     {

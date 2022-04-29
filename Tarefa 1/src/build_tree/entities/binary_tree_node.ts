@@ -1,6 +1,6 @@
 
 /*
-* represents a node on a binary tree
+* Represents a node on a binary tree
 */
 export default class Node{
     constructor(
@@ -11,22 +11,27 @@ export default class Node{
         public visited: boolean = false
     ){}
     /*
-    *  add child elements first on the left, then on the right and finlay throw error
+    *  Add child elements first on the left, then on the right and finlay throw error
     */
     add(value: Node):void{
+
         if(this.left == null){
             this.left = value
         }
+
         else if(this.right == null)
         {
             this.right = value
         }
-        else {
+
+        else 
+        {
             throw "E1 - Mora than two children"
         }
+
     }
     /*
-    *  recursive method that returns the tree as a string
+    *  Recursive method that returns the tree as a string
     */
     toString():string{
         let left : string | undefined = this.left?.toString()

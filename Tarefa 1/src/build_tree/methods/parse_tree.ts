@@ -3,26 +3,26 @@ import Node from "../entities/binary_tree_node"
 
 export default function parse_tree(input:string[][]) : {[key: string]: Node}
 {
-    const all_nodes : {[key: string]: Node} = {}
+    const node_map : {[key: string]: Node} = {}
 
     /* 
     *  Find the node if it is already created otherwise create it
     */
     function match(value:string) : Node 
     {
-        if(all_nodes[value] == undefined)
+        if(node_map[value] == undefined)
         {
             const node = new Node(value, null, null)
-            all_nodes[value] = node
+            node_map[value] = node
             return node
         }
         else
         {
-            return all_nodes[value]
+            return node_map[value]
         }
     }
 
-    // build the all_nodes
+    // Insert the connections on each node
     for(const item of input)
     {
         const [a, b] = item
@@ -32,6 +32,6 @@ export default function parse_tree(input:string[][]) : {[key: string]: Node}
         node_b.root = false
     }
 
-    return all_nodes
+    return node_map
     
 }
