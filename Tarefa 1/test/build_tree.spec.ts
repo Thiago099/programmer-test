@@ -34,6 +34,11 @@ describe("build_tree.ts", () => {
         expect(() => build_tree(""))
             .toThrow("E4 - Invalid input")
 
+        expect(() => build_tree("[A,B] B,C]"))
+            .toThrow("E4 - Invalid input")
+
+        expect(() => build_tree("[A,[B,C]]"))
+            .toThrow("E4 - Invalid input")
     })
     
 

@@ -1,9 +1,24 @@
+
+function validate_square_brackets(input:string){
+    let depth = 0;
+    for(const char of input)
+    {
+             if(char == '[') depth++;
+        else if(char == ']') depth--;
+
+        if(depth < 0) return false;
+        if(depth > 1) return false;
+    }
+    if (depth != 0) return false;
+               else return true;
+}
 /*
 *   Parse the string input into a list of connection info
 */
 export default function parse_string(input:string) : string[][] {
     // ERROR Empty input
     if(input.trim().length == 0) throw "E4 - Invalid input"
+    if(!validate_square_brackets(input))   throw "E4 - Invalid input"
 
     const connection_info = input
         // Split the input
