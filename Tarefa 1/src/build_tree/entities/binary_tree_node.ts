@@ -9,14 +9,14 @@ export default class Node{
     ){}
     add(value: Node):void{
         if(this.left == null){
-            this.left = value;
+            this.left = value
         }
         else if(this.right == null)
         {
-            this.right = value;
+            this.right = value
         }
         else {
-            throw "E1 - Mora than two children";
+            throw "E1 - Mora than two children"
         }
     }
     toString():string{
@@ -24,7 +24,7 @@ export default class Node{
         let right : string | undefined = this.right?.toString()
         if(left) left = `[${left}]`
         if(right) right = `[${right}]`
-        if(left) return `${this.value}[${left}${right ?? ''}]`;
+        if(left) return `${this.value}[${left}${right ?? ''}]`
         return this.value
     }
 }

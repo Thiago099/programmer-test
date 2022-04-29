@@ -1,4 +1,4 @@
-import build_tree from './build_tree/build_tree';
+import build_tree from './build_tree/build_tree'
 
 try{
     console.log(
@@ -7,5 +7,5 @@ try{
 }
 catch(e)
 {
-    console.log(e);
+    console.log(e)
 }

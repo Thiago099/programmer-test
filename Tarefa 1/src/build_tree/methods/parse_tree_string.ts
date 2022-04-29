@@ -3,5 +3,5 @@ export default function parse(input:string) : string[][] {
         .split(/[\[\]]+/)
         .map(x => x.trim())
         .filter(x => x.length > 0)
-        .map(x => x.split(","));
+        .map(x => x.split(","))
 }
