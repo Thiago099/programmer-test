@@ -15,7 +15,8 @@ export default class Node{
     */
     add(value: Node):void{
 
-        if(this.left == null){
+        if(this.left == null)
+        {
             this.left = value
         }
 
