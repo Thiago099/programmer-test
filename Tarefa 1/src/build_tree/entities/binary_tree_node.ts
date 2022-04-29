@@ -26,7 +26,7 @@ export default class Node{
         }
     }
     /*
-    *  recursive method that returns the tree
+    *  recursive method that returns the tree as a string
     */
     toString():string{
         let left : string | undefined = this.left?.toString()
