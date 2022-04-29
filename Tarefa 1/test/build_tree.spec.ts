@@ -1,7 +1,7 @@
 import build_tree from '../src/build_tree/build_tree';
 describe("build_tree.ts", () => {
 
-    test("success", () => {
+    test("Success", () => {
         expect(build_tree("[A,B] [A,C] [B,G] [C,H] [E,F] [B,D] [C,E]"))
             .toBe("A[[B[[G][D]]][C[[H][E[[F]]]]]]");
     })
