@@ -1,25 +1,25 @@
 
 import Node from "../entities/binary_tree_node"
 
-export default function build_structure(input:string[][]) : {[key: string]: Node}
+export default function parse_tree(input:string[][]) : {[key: string]: Node}
 {
-    const tree : {[key: string]: Node} = {}
+    const all_nodes : {[key: string]: Node} = {}
 
     function match(value:string) : Node 
     {
-        if(tree[value] == undefined)
+        if(all_nodes[value] == undefined)
         {
             const node = new Node(value, null, null)
-            tree[value] = node
+            all_nodes[value] = node
             return node
         }
         else
         {
-            return tree[value]
+            return all_nodes[value]
         }
     }
 
-    // build the tree
+    // build the all_nodes
     for(const item of input)
     {
         const [a, b] = item
@@ -29,6 +29,6 @@ export default function build_structure(input:string[][]) : {[key: string]: Node
         node_b.root = false
     }
 
-    return tree
+    return all_nodes
     
 }
