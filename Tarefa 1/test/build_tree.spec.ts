@@ -19,4 +19,11 @@ describe("operate.ts", () => {
         expect(() => build_tree("[A,B] [A,C] [A,D]")).toThrow("E1 - Mora than two children");
     })
 
+    test("E4 - Invalid input",()=>{
+        expect(() => build_tree("[A,B,C]")).toThrow("E4 - Invalid input");
+        expect(() => build_tree("")).toThrow("E4 - Invalid input");
+        expect(() => build_tree("[A,B A,C]")).toThrow("E4 - Invalid input");
+    })
+    
+
 })
