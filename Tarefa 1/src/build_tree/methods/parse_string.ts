@@ -5,7 +5,7 @@ function validate_square_brackets(input:string){
     {
              if(char == '[') depth++;
         else if(char == ']') depth--;
-
+        if(depth == 0 && char.match(/\w/))  return false
         if(depth < 0) return false;
         if(depth > 1) return false;
     }
@@ -19,7 +19,7 @@ export default function parse_string(input:string) : string[][] {
 
     // ERROR Empty input
     if(input.trim().length == 0) throw "E4 - Invalid input"
-
+    
     // ERROR in square brackets syntax
     if(!validate_square_brackets(input))   throw "E4 - Invalid input"
 
