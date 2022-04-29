@@ -1,5 +1,5 @@
-import { build_tree } from '../src/build_tree';
+import { build_tree } from './build_tree/build_tree';
 
 console.log(
-build_tree("[A,B] [A,C] [B,G] [C,H] [E,F] [B,D] [C,E] [A,F]")
+    build_tree("[A,B] [A,C] [B,D] [D,C]")
 )
