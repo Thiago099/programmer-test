@@ -17,7 +17,7 @@ A[[B[[G][D]]][C[[H][E[[F]]]]]]
 npm install
 ```
 
-index.ts:
+index.ts
 ```
 npm start
 ```
