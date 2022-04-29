@@ -13,7 +13,7 @@ describe("build_tree.ts", () => {
 
     test("E2 - Cycle",()=>
     {
-        expect(() => build_tree("[A,B] [B,A]"))
+        expect(() => build_tree("[A,B] [B,C] [C,B]"))
             .toThrow("E2 - Cycle");
 
         expect(() => build_tree("[A,B] [A,C] [C,A]"))
