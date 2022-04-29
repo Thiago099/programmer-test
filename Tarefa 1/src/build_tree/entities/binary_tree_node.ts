@@ -11,7 +11,7 @@ export default class Node{
         public visited: boolean = false
     ){}
     /*
-    *  add child elements on the left, then on the right else throw error
+    *  add child elements first on the left, then on the right and finlay throw error
     */
     add(value: Node):void{
         if(this.left == null){
