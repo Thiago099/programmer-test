@@ -14,5 +14,6 @@ export default function build_tree(input: string): string
     // Validate the tree and find the root
     const root = find_root(node_map)
 
+    // Uses the tree to build the expected string
     return root?.toString() ?? ""
 }
