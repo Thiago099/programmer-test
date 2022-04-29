@@ -5,6 +5,9 @@ export default function parse_tree(input:string[][]) : {[key: string]: Node}
 {
     const all_nodes : {[key: string]: Node} = {}
 
+    /* 
+    *  Find the node if it is already created otherwise create it
+    */
     function match(value:string) : Node 
     {
         if(all_nodes[value] == undefined)

@@ -1,4 +1,7 @@
 
+/*
+* represents a node on a binary tree
+*/
 export default class Node{
     constructor(
         public value: string, 
@@ -7,6 +10,9 @@ export default class Node{
         public root: boolean = true,
         public visited: boolean = false
     ){}
+    /*
+    *  add child elements on the left, then on the right else throw error
+    */
     add(value: Node):void{
         if(this.left == null){
             this.left = value
@@ -19,6 +25,9 @@ export default class Node{
             throw "E1 - Mora than two children"
         }
     }
+    /*
+    *  recursive method that returns the tree
+    */
     toString():string{
         let left : string | undefined = this.left?.toString()
         let right : string | undefined = this.right?.toString()
