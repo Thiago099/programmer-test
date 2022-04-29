@@ -13,7 +13,7 @@ export default class Node{
     /*
     *  Add child elements first on the left, then on the right and finlay throw error
     */
-    add(value: Node):void{
+    add(value : Node) : void{
 
         if(this.left == null)
         {

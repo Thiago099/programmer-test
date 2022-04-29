@@ -3,7 +3,7 @@
 *    Validate the tree and find the root
 */
 import Node from "../entities/binary_tree_node"
-export default function find_root(node_map: {[key: string]: Node}) : Node | null
+export default function find_root(node_map : {[key : string] : Node}) : Node | null
 {
     // Find the root and if there are more than one roots
     let roots = 0

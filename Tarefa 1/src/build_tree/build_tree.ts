@@ -3,7 +3,7 @@ import parse_string from './methods/parse_string'
 import parse_connection_info from "./methods/parse_connection_info"
 import find_root from './methods/find_root'
 
-export default function build_tree(input: string): string 
+export default function build_tree(input : string) : string 
 {
     // Parse the string input into a list of connection info
     const connection_info = parse_string(input)

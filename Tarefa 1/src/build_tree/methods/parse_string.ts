@@ -1,5 +1,5 @@
 
-function validate_square_brackets(input:string){
+function validate_square_brackets(input : string){
     let depth = 0;
     for(const char of input)
     {
@@ -15,7 +15,7 @@ function validate_square_brackets(input:string){
 /*
 *   Parse the string input into a list of connection info
 */
-export default function parse_string(input:string) : string[][] {
+export default function parse_string(input : string) : string[][] {
 
     // ERROR Empty input
     if(input.trim().length == 0) throw "E4 - Invalid input"
