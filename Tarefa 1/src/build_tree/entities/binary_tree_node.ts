@@ -26,7 +26,7 @@ export default class Node{
 
         else 
         {
-            throw "E1 - Mora than two children"
+            throw "E1 - More than two children"
         }
 
     }

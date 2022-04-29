@@ -6,9 +6,9 @@ describe("build_tree.ts", () => {
             .toBe("A[[B[[G][D]]][C[[H][E[[F]]]]]]")
     })
     
-    test("E1 - Mora than two children",()=>{
+    test("E1 - More than two children",()=>{
         expect(() => build_tree("[A,B] [A,C] [A,D]"))
-            .toThrow("E1 - Mora than two children")
+            .toThrow("E1 - More than two children")
     })
 
     test("E2 - Cycle",()=>
