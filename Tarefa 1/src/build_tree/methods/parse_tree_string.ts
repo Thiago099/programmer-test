@@ -1,6 +1,6 @@
 export default function parse_tree_string(input:string) : string[][] {
     return input
-        // split the result
+        // split the input
         .split(/[\[\]]+/)
         // clean up whitespace
         .map(x => x.trim())
