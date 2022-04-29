@@ -18,10 +18,10 @@ function validate_square_brackets(input : string){
 export default function parse_string(input : string) : string[][] {
 
     // ERROR Empty input
-    if(input.trim().length == 0) throw "E4 - Invalid input"
+    if(input.trim().length == 0) throw "E4 - Invalid syntax"
     
     // ERROR in square brackets syntax
-    if(!validate_square_brackets(input))   throw "E4 - Invalid input"
+    if(!validate_square_brackets(input))   throw "E4 - Invalid syntax"
 
     // Split the input into a list of connection info
     const connection_info = input
@@ -35,7 +35,7 @@ export default function parse_string(input : string) : string[][] {
         .map(x => x.split(","))
 
     // ERROR More than 3 node connection
-    if(connection_info.some(item => item.length != 2)) throw "E4 - Invalid input"
+    if(connection_info.some(item => item.length != 2)) throw "E4 - Invalid syntax"
 
     return connection_info
 }

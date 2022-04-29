@@ -26,22 +26,22 @@ describe("build_tree.ts", () => {
             .toThrow("E3 - Multiple roots")
     })
 
-    test("E4 - Invalid input",()=>{
+    test("E4 - Invalid syntax",()=>{
 
         expect(() => build_tree("[A,B,C]"))
-            .toThrow("E4 - Invalid input")
+            .toThrow("E4 - Invalid syntax")
 
         expect(() => build_tree(""))
-            .toThrow("E4 - Invalid input")
+            .toThrow("E4 - Invalid syntax")
 
         expect(() => build_tree("[A,B] B,C]"))
-            .toThrow("E4 - Invalid input")
+            .toThrow("E4 - Invalid syntax")
 
         expect(() => build_tree("[A,[B,C]]"))
-            .toThrow("E4 - Invalid input")
+            .toThrow("E4 - Invalid syntax")
 
         expect(() => build_tree("[A,B] B,C"))
-            .toThrow("E4 - Invalid input")
+            .toThrow("E4 - Invalid syntax")
     })
     
 
