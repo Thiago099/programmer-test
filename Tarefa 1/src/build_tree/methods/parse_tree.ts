@@ -1,7 +1,7 @@
 
 import Node from "../entities/binary_tree_node";
 
-export default function build_structure(input:string[][]) : Node | null
+export default function build_structure(input:string[][]) : [Node | null, Number]
 {
     const tree : {[key: string]: Node} = {};
 
@@ -40,22 +40,5 @@ export default function build_structure(input:string[][]) : Node | null
             root = tree[key];
         }
     }
-    
-    if(roots != 1)
-    {
-        if(roots == 0) throw "E2 - Cycle";
-        throw "E3 - Multiple roots";
-    }
-
-    // find cycles
-    dfs(root);
-    function dfs(node:Node | null) : void
-    {
-        if(node == null) return;
-        if(node.visited) throw "E2 - Cycle";
-        node.visited = true;
-        dfs(node.left);
-        dfs(node.right);
-    }
-    return root
+    return [root, roots]
 }
