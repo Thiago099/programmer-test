@@ -21,7 +21,7 @@ export default function build_tree(input: string): string
 
     // find cycles
     dfs(root);
-    function dfs(node:Node | null) : void
+    function dfs(node: Node | null) : void
     {
         if(node == null) return;
         if(node.visited) throw "E2 - Cycle";
