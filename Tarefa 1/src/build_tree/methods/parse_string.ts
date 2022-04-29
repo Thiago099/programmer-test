@@ -33,6 +33,8 @@ export default function parse_string(input : string) : string[][] {
         .filter(x => x.length > 0)
         // Split each connection
         .map(x => x.split(","))
+        // remove extra spaces
+        .map(x => x.map(y => y.trim()))
 
     // ERROR More than 3 node connection
     if(connection_info.some(item => item.length != 2)) throw "E4 - Invalid syntax"
