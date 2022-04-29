@@ -1,5 +1,5 @@
 import build_tree from '../src/build_tree/build_tree';
-describe("operate.ts", () => {
+describe("build_tree.ts", () => {
 
     test("success", () => {
         expect(build_tree("[A,B] [A,C] [B,G] [C,H] [E,F] [B,D] [C,E]"))
