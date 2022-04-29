@@ -13,7 +13,7 @@ describe("build_tree.ts", () => {
 
     test("E2 - Cycle",()=>
     {
-        expect(() => build_tree("[A,B] [A,C] [B,D] [D,C]"))
+        expect(() => build_tree("[A,B] [B,A]"))
             .toThrow("E2 - Cycle");
 
         expect(() => build_tree("[A,B] [A,C] [C,A]"))
@@ -22,7 +22,7 @@ describe("build_tree.ts", () => {
 
     test("E3 - Multiple roots",()=>
     {
-        expect(() => build_tree("[A,B] [A,C] [B,D] [D,C] [C,A]"))
+        expect(() => build_tree("[A,B] [C,D]"))
             .toThrow("E3 - Multiple roots");
     })
 
