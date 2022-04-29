@@ -1,7 +1,7 @@
 
 import Node from "../entities/binary_tree_node";
 
-export default function build_structure(input:string[][]) : [Node | null, Number]
+export default function build_structure(input:string[][]) : {[key: string]: Node}
 {
     const tree : {[key: string]: Node} = {};
 
@@ -29,16 +29,6 @@ export default function build_structure(input:string[][]) : [Node | null, Number
         node_b.root = false
     }
 
-    // find all roots
-    let roots = 0
-    let root : Node | null = null
-    for(const key in tree)
-    {
-        if(tree[key].root)
-        {
-            roots++;
-            root = tree[key];
-        }
-    }
-    return [root, roots]
+    return tree
+    
 }

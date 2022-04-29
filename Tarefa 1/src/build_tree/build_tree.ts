@@ -11,7 +11,19 @@ export default function build_tree(input: string): string
 
     if(parsed.some(item => item.length != 2)) throw "E4 - Invalid input"
     
-    const [root, roots] = build_structure(parsed);
+    const tree = build_structure(parsed);
+
+    // find all roots
+    let roots = 0
+    let root : Node | null = null
+    for(const key in tree)
+    {
+        if(tree[key].root)
+        {
+            roots++;
+            root = tree[key];
+        }
+    }
 
     if(roots != 1)
     {
