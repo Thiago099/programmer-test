@@ -1,4 +1,4 @@
-import { build_tree } from '../src/build_tree/build_tree';
+import build_tree from '../src/build_tree/build_tree';
 describe("operate.ts", () => {
 
     test("success", () => {

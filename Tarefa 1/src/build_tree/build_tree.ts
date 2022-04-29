@@ -1,6 +1,6 @@
 import parse from './methods/parse_tree_string'
 import build_structure from "./methods/parse_tree";
-export function build_tree(input: string): string 
+export default function build_tree(input: string): string 
 {
     if(input.trim().length == 0) throw "E4 - Invalid input";
     if(!input.match(/\[[\s\w]+,[\s\w]+\]/g)) throw "E4 - Invalid input";
@@ -9,6 +9,6 @@ export function build_tree(input: string): string
 
     if(parsed.some(item => item.length != 2)) throw "E4 - Invalid input"
     const root = build_structure(parsed);
-    
+
     return root?.toString() ?? "";
 }
