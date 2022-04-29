@@ -16,10 +16,14 @@ function validate_square_brackets(input:string){
 *   Parse the string input into a list of connection info
 */
 export default function parse_string(input:string) : string[][] {
+
     // ERROR Empty input
     if(input.trim().length == 0) throw "E4 - Invalid input"
+
+    // ERROR in square brackets syntax
     if(!validate_square_brackets(input))   throw "E4 - Invalid input"
 
+    // Split the input into a list of connection info
     const connection_info = input
         // Split the input
         .split(/[\[\]]+/)
