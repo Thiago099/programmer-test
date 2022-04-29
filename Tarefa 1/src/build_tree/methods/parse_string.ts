@@ -5,7 +5,7 @@ function validate_square_brackets(input : string){
     {
              if(char == '[') depth++;
         else if(char == ']') depth--;
-        if(depth == 0 && char.match(/\w/))  return false
+        if(depth == 0 && char.match(/[\w,]/))  return false
         if(depth < 0) return false;
         if(depth > 1) return false;
     }
