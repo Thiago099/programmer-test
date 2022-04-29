@@ -1,7 +1,9 @@
 import build_tree from '../src/build_tree/build_tree'
-describe("build_tree.ts", () => {
+describe("build_tree.ts", () => 
+{
 
-    test("Success", () => {
+    test("Success", () => 
+    {
         expect(build_tree("[A,B] [A,C] [B,G] [C,H] [E,F] [B,D] [C,E]"))
             .toBe("A[[B[[G][D]]][C[[H][E[[F]]]]]]")
     })
@@ -11,7 +13,7 @@ describe("build_tree.ts", () => {
             .toThrow("E1 - More than two children")
     })
 
-    test("E2 - Cycle",()=>
+    test("E2 - Cycle", () =>
     {
         expect(() => build_tree("[A,B] [B,C] [C,B]"))
             .toThrow("E2 - Cycle")
@@ -20,13 +22,14 @@ describe("build_tree.ts", () => {
             .toThrow("E2 - Cycle")
     })
 
-    test("E3 - Multiple roots",()=>
+    test("E3 - Multiple roots", () =>
     {
         expect(() => build_tree("[A,B] [C,D]"))
             .toThrow("E3 - Multiple roots")
     })
 
-    test("E4 - Invalid syntax",()=>{
+    test("E4 - Invalid syntax", () =>
+    {
 
         expect(() => build_tree("[A,B,C]"))
             .toThrow("E4 - Invalid syntax")
