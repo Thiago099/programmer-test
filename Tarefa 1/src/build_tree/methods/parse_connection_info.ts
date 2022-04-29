@@ -30,7 +30,7 @@ export default function parse_connection_info(input : string[][]) : {[key : stri
         const [a, b] = item
         const node_a = match(a)
         const node_b = match(b)
-        node_a?.add(node_b)
+        node_a.add(node_b)
         node_b.root = false
     }
 
