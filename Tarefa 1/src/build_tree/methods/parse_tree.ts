@@ -43,6 +43,7 @@ export default function build_structure(input:string[][]) : Node | null
     
     if(roots != 1)
     {
+        if(roots == 0) throw "E2 - Cycle";
         throw "E3 - Multiple roots";
     }
 
