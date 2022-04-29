@@ -1,6 +1,6 @@
 
 import parse_string from './methods/parse_string'
-import parse_tree from "./methods/parse_tree"
+import parse_connection_info from "./methods/parse_connection_info"
 import find_root from './methods/find_root'
 
 export default function build_tree(input: string): string 
@@ -9,7 +9,7 @@ export default function build_tree(input: string): string
     const connection_info = parse_string(input)
     
     // Create a tree from the connection info
-    const node_map = parse_tree(connection_info)
+    const node_map = parse_connection_info(connection_info)
 
     // Validate the tree and find the root
     const root = find_root(node_map)

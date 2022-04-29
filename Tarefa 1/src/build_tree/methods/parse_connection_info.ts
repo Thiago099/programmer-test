@@ -3,7 +3,7 @@ import Node from "../entities/binary_tree_node"
 /*
 *    Create a tree from the connection info
 */
-export default function parse_tree(input:string[][]) : {[key: string]: Node}
+export default function parse_connection_info(input:string[][]) : {[key: string]: Node}
 {
     const node_map : {[key: string]: Node} = {}
 
