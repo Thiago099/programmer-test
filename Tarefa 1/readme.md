@@ -8,6 +8,7 @@ exemplo:
 
 input:
 [A,B] [A,C] [B,G] [C,H] [E,F] [B,D] [C,E]
+
 output:
 A[[B[[G][D]]][C[[H][E[[F]]]]]]
 
